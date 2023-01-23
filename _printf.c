@@ -39,7 +39,8 @@ int _printf(const char *format, ...)
             size = get_size(format, &i);
             ++i;
            
-            printed = handle_print(format, &i, list, buffer, flags, width, precision, size);
+            printed = handle_print(format, &i, list, buffer
+            , flags, width, precision, size);
            
             if (printed == -1)
                 return (-1);
