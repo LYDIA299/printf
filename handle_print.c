@@ -23,7 +23,8 @@ int handle_print(const char *fmt, int *ind, va_list list
         {'b', print_binary}, {'u', print_unsigned},
         {'o', print_octal}, {'x', print_hexadecimal},
         {'X', print_hexa_upper},  {'S', print_non_printable},
-        {'p', print_pointer},{'\0', NULL}
+        {'p', print_pointer}, {'c', print_char}, {'s', print_string}, {'%', print_percent},
+		{'d', print_int}, {'r', print_reverse}, {'R', print_rot13string}, {'\0', NULL}
         
     };
 

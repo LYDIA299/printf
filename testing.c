@@ -8,12 +8,12 @@ int main(void)
     int len;
     int len2;
     unsigned int ui;
-    void *addr;
+    /*void *addr;*/
 
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
     ui = (unsigned int)INT_MAX + 1024;
-    addr = (void *)0x7ffe637541f0;
+    /* addr = (void *)0x7ffe637541f0; */
 
     /* Number 1*/
 
@@ -55,8 +55,17 @@ int main(void)
     printf("String:[%s]\n", "I am a string !");
 
     /* Task 6*/
-    _printf("Address:[%p]\n", addr);
-    printf("Address:[%p]\n", addr);
+   /**
+    *  _printf("Address:[%p]\n", addr);
+        printf("Address:[%p]\n", addr);
+   */
+
+    len = _printf("Percent:[%%]\n");
+    len2 = printf("Percent:[%%]\n");
+    _printf("Len:[%d]\n", len);
+    printf("Len:[%d]\n", len2);
+    _printf("Unknown:[%r]\n");
+    printf("Unknown:[%r]\n");
    
     
     return (0);
