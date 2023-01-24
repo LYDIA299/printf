@@ -76,6 +76,10 @@ int print_hexa(va_list types, char map_to[],
 char buffer[], int flags, char flag_ch, int width, int precision, int size);
 
 
+/* Function to print non printable characters */
+int print_non_printable(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
+
 
 /* Functions to handle other specifiers*/
 int get_flags(const char *format, int *i);
@@ -98,5 +102,6 @@ int write_unsgnd(int is_negative, int ind, char buffer[],
 int is_degit(char);
 long int convert_size_number(long int num, int size);
 long int convert_size_unsgnd(unsigned long int num, int size);
-
+int append_hexa_code(char, char[], int);
+int is_printable(char);
 #endif

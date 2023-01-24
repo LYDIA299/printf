@@ -7,6 +7,11 @@ int main(void)
 {
     int len;
     int len2;
+    unsigned int ui;
+
+    len = _printf("Let's try to printf a simple sentence.\n");
+    len2 = printf("Let's try to printf a simple sentence.\n");
+    ui = (unsigned int)INT_MAX + 1024;
 
     /* Number 1*/
 
@@ -30,15 +35,23 @@ int main(void)
 
      
 
-    /* Number 2*/
-     _printf("%b\n", 98);
+    /* Number 2 ???????*/
+     /*_printf("%b\n", 98);*/
 
      /* Task 3*/
-     _printf("%u\n", 34);
-       _printf("%o\n", 21);
-        _printf("%x\n", 552);
-         _printf("%X\n", 654);
-     
+ _printf("Unsigned:[%u]\n", ui);
+    printf("Unsigned:[%u]\n", ui);
+    _printf("Unsigned octal:[%o]\n", ui);
+    printf("Unsigned octal:[%o]\n", ui);
+    _printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+    printf("Unsigned hexadecimal:[%x, %X]\n", ui, ui);
+
+    /* Task 4*/
+    _printf("Character:[%c]\n", 'H');
+    printf("Character:[%c]\n", 'H');
+    _printf("String:[%s]\n", "I am a string !");
+    printf("String:[%s]\n", "I am a string !");
+   
     
     return (0);
 }

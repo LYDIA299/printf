@@ -14,48 +14,39 @@
 */
 
 int handle_print(const char *fmt, int *ind, va_list list
-		 , char buffer[], int flags, int width, int precision, int size)
+, char buffer[], int flags, int width, int precision, int size)
 {
-<<<<<<< HEAD
     int i, u_len = 0, printed_chars = -1;
     fmt_t fmt_types[] = 
     {
         {'d', print_int}, {'i', print_int}, 
         {'b', print_binary}, {'u', print_unsigned},
         {'o', print_octal}, {'x', print_hexadecimal},
-        {'X', print_hexa_upper}, {'\0', NULL}
+        {'X', print_hexa_upper},  {'S', print_non_printable},
+        {'\0', NULL}
         
     };
-=======
-	int i, u_len = 0, printed_chars = -1;
-	fmt_t fmt_types[] = {
-			{'d', print_int}, {'i', print_int},
-			{'b', print_binary}, {'u', print_unsigned},
-			{'\0', NULL}
-		};
->>>>>>> 1163d5c068a50e95e7f9bbc3f2e29274addfc552
 
-	for (i = 0; fmt_types[i].fmt != '\0'; i++)
-		if (fmt[*ind] == fmt_types[i].fmt)
-			return (fmt_types[i].fn(list, buffer, flags, width,
-						precision, size));
-	if (fmt[*ind] == '\0')
-	{
-		if (fmt[*ind] == '\0')
-			return (-1);
-		else if (width)
-		{
-			--(*ind);
-			while (fmt[*ind] != ' ' && fmt[*ind] != '%')
-				--(*ind);
-			if (fmt[*ind] == ' ')
-				--(*ind);
-			return (1);
-		}
-		u_len += write(1, &fmt[*ind], 1);
-		return (u_len);
-	}
+    for (i = 0; fmt_types[i].fmt != '\0'; i++)
+        if (fmt[*ind] == fmt_types[i].fmt)
+            return (fmt_types[i].fn(list, buffer, flags, width, precision, size));
+    if (fmt[*ind] == '\0')
+    {
+        if (fmt[*ind] == '\0')
+            return (-1);
+        else if(width)
+        {
+            --(*ind);
+            while (fmt[*ind] != ' ' && fmt[*ind] != '%')
+                --(*ind);
+            if (fmt[*ind] == ' ')
+                --(*ind);
+            return(1);
+        }
 
-	return (printed_chars);
-
+        u_len += write(1, &fmt[*ind], 1);
+        return (u_len);
+    } 
+    return (printed_chars);  
+    
 }
