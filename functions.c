@@ -1,5 +1,6 @@
 #include "main.h"
-/************* PRINT INT ******************
+/************* PRINT INT ******************/
+/**
  * print_int - This function prints int
  * @types: List of arguments
  * @buffer: Buffer array to handle print
