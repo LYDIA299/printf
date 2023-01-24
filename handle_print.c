@@ -23,7 +23,7 @@ int handle_print(const char *fmt, int *ind, va_list list
         {'b', print_binary}, {'u', print_unsigned},
         {'o', print_octal}, {'x', print_hexadecimal},
         {'X', print_hexa_upper},  {'S', print_non_printable},
-        {'\0', NULL}
+        {'p', print_pointer},{'\0', NULL}
         
     };
 
