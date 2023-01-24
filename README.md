@@ -1,1 +1,1 @@
-Please run this and merge to main branch. I solved number 1\n I am tired for tonight, Will continue in the morning. Try to read through an grap the concept to solve others, I already layed the foundation
+Working on task number 2 now

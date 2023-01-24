@@ -57,6 +57,9 @@ int print_percent(va_list types, char buffer[], int flags,
 int print_int(va_list types, char buffer[], int flags,
     int width, int precision, int size);
 
+int print_unsigned(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
+
 
 /* Functions to handle other specifiers*/
 int get_flags(const char *format, int *i);
