@@ -21,7 +21,8 @@ int handle_print(const char *fmt, int *ind, va_list list
     {
         {'d', print_int}, {'i', print_int}, 
         {'b', print_binary}, {'u', print_unsigned},
-        {'\0', NULL}
+        {'o', print_octal}, {'x', print_hexadecimal},
+        {'X', print_hexa_upper}, {'\0', NULL}
         
     };
 

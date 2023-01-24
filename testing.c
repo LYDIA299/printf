@@ -28,8 +28,17 @@ int main(void)
     _printf("Negative:[%d]\n", -762534);
 
 
+     
+
     /* Number 2*/
      _printf("%b\n", 98);
+
+     /* Task 3*/
+     _printf("%u\n", 34);
+       _printf("%o\n", 21);
+        _printf("%x\n", 552);
+         _printf("%X\n", 654);
+     
     
     return (0);
 }

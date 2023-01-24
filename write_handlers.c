@@ -90,7 +90,7 @@ int write_num(int ind, char buffer[],
 	return (write(1, &buffer[ind], length));
 }
 
-/**
+/** 
  * write_unsgnd - This function prints an unsigned number
  * @is_negative: Number indicating if the num is negative
  * @ind: Index at which the number starts in the buffer
